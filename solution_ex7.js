@@ -1,7 +1,7 @@
 let menuTable1 = "SMLTX";
 let menuTable2 = "SMT";
 let menuTable3 = "LLMTX";
-let price=0;
+
 let totalRevenue=0
 
 console.log("-------- bắt đầu ca làm ----------");
@@ -10,10 +10,10 @@ for (let i = 0; i < 3; i++) {
     console.log("    =====================");
     console.log(`    =    hóa đơn bàn ${i+1}  =`);
     console.log("    =====================");
-    let menuTablei = i === 1 ? menuTable1 : i === 2 ? menuTable2 : menuTable3;
+    let menuTablei = i === 0 ? menuTable1 : i === 1 ? menuTable2 : menuTable3;
     console.log(`    danh sách món ăn bàn ${i+1} : ${menuTablei}`    );
 
-
+let price=0;
     for (let j = 0; j < menuTablei.length; j++) {
     let item = menuTablei[j];
 
@@ -52,8 +52,7 @@ for (let i = 0; i < 3; i++) {
   const priceAfterSale = price - discount;
     console.log(`tổng thanh toán ${sale?`(giảm 10%)`:``}: ${priceAfterSale}`);
     totalRevenue += priceAfterSale;
-
+}
 console.log("========================================");
 console.log(`TỔNG DOANH THU CA PHỤC VỤ: ${totalRevenue} VNĐ`);
 console.log("========================================");
-}
